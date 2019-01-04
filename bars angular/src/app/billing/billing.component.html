@@ -1,0 +1,26 @@
+
+ <div class = "container">
+    <ng-container *ngIf = "billingObservable | async as billings">
+      <table class = "table-responsive table table-hover bg-dark rounded_corner" style="background: rgba(114, 147, 167, 0.8); ">
+        <tr style="font-size:28px; color:bisque; background: rgba(66, 70, 73, 0.8)">
+          <th style="text-align: center">Billing Cycle</th>
+          <th style="text-align: center">Start Date</th>
+          <th style="text-align: center">End Date</th>
+          <th style="text-align: center">First Name</th>
+          <th style="text-align: center">Last Name</th>
+          <th style="text-align: center">Amount</th>
+        </tr>
+          <tr *ngFor="let record of billings" style="font-size: 23px; font-weight: bold; text-shadow: 1px 0px 0.5px blanchedalmond">
+          <td style="text-align: center">{{record.billingCycle}}</td>
+          <td style="text-align: center">{{record.startDate | date:'yyyy-MM-dd'}}</td>
+          <td style="text-align: center">{{record.endDate |date:'yyyy-MM-dd'}}</td>
+          <td style="text-align: center">{{record.firstName}}</td>
+          <td style="text-align: center">{{record.lastName}}</td>
+          <td style="text-align: center">{{record.amount}}</td>
+            </tr>            
+      </table>
+    </ng-container>
+
+  </div>
+
+ 

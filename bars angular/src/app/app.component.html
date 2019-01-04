@@ -1,0 +1,55 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div style="text-align:center; color: antiquewhite; ">
+  <h1>
+    <div *ngIf="username!='x'">
+      Welcome, <strong>{{username}} </strong>!
+    </div>
+  </h1>
+
+
+  <div class="jumbotron" style="background-image: url(https://images.pexels.com/photos/953214/pexels-photo-953214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+    <h1 style="text-shadow: 1px 1px 3px darkslategray">Billing <img alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+        style="width: 120px">utomated Requisition System Application</h1>
+    <br>
+    <span style="font-size: 20px">P o w e r e d &nbsp;&nbsp; b y &nbsp;&nbsp; A N G U L A R</span>
+  </div>
+</div>
+
+<!-- ====================== -->
+
+<div *ngIf="username=='x'" class = "container">
+
+    <div class="jumbotron" style="font-size: 50px; background-color:rgb(194, 47, 76); text-shadow: 1px 1px 1px black; text-align:center; color: antiquewhite;">
+      <strong>NOT AUTHORIZED OR NOT AVAILABLE </strong>!
+    </div>
+    {{errorOutput}}                                                                                                                                   
+    
+      <a href="http://localhost:8002/" class="btn btn-lg btn-default" style="height: 90px; width: 450px; font-size: 40px; margin-left: 30%">Return
+        to BARS</a>
+      
+  </div>
+
+
+  <div *ngIf="username!='x'">
+       
+    <div *ngIf ="!errorOutput.includes('ERROR:')"> 
+       <app-billing></app-billing>
+ .  </div>
+
+    <!-- <a href="http://localhost:4200" class="btn btn-lg btn-primary" style="height: 90px; width: 450px; font-size: 40px; margin-left: 30%" >Upload Again</a>
+    </div> -->
+    <div class ="container header" style="text-shadow: 1px 1px 2px white; margin-left: 13%; color: rgb(156, 65, 65); font-size: 60px">
+        <!-- <div *ngIf ="!errorOutput.includes('ERROR:')">ngif Hello</div> -->
+        <div *ngIf ="errorOutput.includes('ERROR:')"> {{errorOutput}} </div>
+
+       
+    </div>
+ 
+ 
+    <div>
+      <app-form (sendFilePathToAppComponentEvent)= " receiveFilePathFromFormComponent($event)">
+      </app-form>
+    </div>
+  
+  </div>
