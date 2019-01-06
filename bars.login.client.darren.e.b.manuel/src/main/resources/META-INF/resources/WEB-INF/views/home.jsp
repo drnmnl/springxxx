@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
@@ -22,15 +22,15 @@
 	<br>
 	<div class="container" style="margin-left: 35%">
 	<c:if test = "${admin==true}">
-		<a href="/users" class = "btn btn-lg btn-success" style="height: 100px; width: 450px; font-size: 50px " >Manage Accounts</a><br><br><br>
+		<a href="/login-client-service/users" class = "btn btn-lg btn-success" style="height: 100px; width: 450px; font-size: 50px " >Manage Accounts</a><br><br><br>
 	</c:if>
 
 		<a href="http://localhost:4200" class = "btn btn-lg btn-warning" style="height: 100px; width: 450px; font-size: 50px " >Open BARS</a><br><br><br>
 
 		<c:if test = "${admin==false}">
-			<a href="/users/${id}/edit" class = "btn btn-lg btn-success" style="height: 100px; width: 450px; font-size: 50px " >Edit My Account</a><br><br><br>
+			<a href="/login-client-service/users/${id}/edit" class = "btn btn-lg btn-success" style="height: 100px; width: 450px; font-size: 50px " >Edit My Account</a><br><br><br>
 		</c:if>
-		<a href="/logout" class = "btn btn-lg btn-primary" style="height: 100px; width: 450px; font-size: 50px " >Logout</a>
+		<a href="/login-client-service/logout" class = "btn btn-lg btn-primary" style="height: 100px; width: 450px; font-size: 50px " >Logout</a>
 	</div>
 
 	<br><br><br><br>

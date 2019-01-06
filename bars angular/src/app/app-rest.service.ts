@@ -71,7 +71,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AppRestService implements OnInit {
-  billingObservable: Observable<Record[]>
+  billingObservable: Observable<Record[]>;
   filePath: string;
  
   constructor(private http: HttpClient) { }
@@ -79,7 +79,6 @@ export class AppRestService implements OnInit {
   ngOnInit() {
     this.getRecordsFromApi();
     this.getCredentialsAsToken();
-  
   }
   
   getFilePathFromComponent(filePath: string) {
@@ -89,13 +88,13 @@ export class AppRestService implements OnInit {
 
 
   getCredentialsAsToken() {
-    return this.http.get<JsonUnwrap>("http://localhost:8010/loginstatus")
+    return this.http.get<JsonUnwrap>("http://localhost:9999/bars-server-service/loginstatus")
   }
   
   // POST
   postFilePathToApi() {
     console.log("POSTING FILEPATH TO SERVER: " + this.filePath);
-    this.http.post<string>("http://localhost:8010/sendfile", this.filePath).subscribe(
+    this.http.post<string>("http://localhost:9999/bars-server-service/sendfile", this.filePath).subscribe(
       res => {
         console.log(res);
       },
@@ -107,12 +106,12 @@ export class AppRestService implements OnInit {
   
   // GET RECORDS
   getRecordsFromApi() {
-    return this.http.get<Record[]>("http://localhost:8010/upload");
+    return this.http.get<Record[]>("http://localhost:9999/bars-server-service/upload");
   }
  
   postTestToApi() {
     console.log("POST TEST");
-    this.http.post("http://localhost:8010/test", "DAB WITH IT").subscribe(
+    this.http.post("http://localhost:9999/bars-server-service/test", "DAB WITH IT").subscribe(
       res => {
         console.log(res);
       },
@@ -143,4 +142,4 @@ export class AppRestService implements OnInit {
 //         err => {
 //           console.log("Error occured");
 //         }
-//       );
+//       

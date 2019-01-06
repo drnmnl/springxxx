@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/bars.darren.e.b.manuel" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bars.eureka.darren.e.b.manuel" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bars.login.client.darren.e.b.manuel" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bars.login.server.darren.e.b.manuel" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bars.zuul.darren.e.b.manuel" charset="UTF-8" />
+  </component>
+</project>

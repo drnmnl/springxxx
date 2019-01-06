@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -22,7 +22,7 @@
                 Create New User
               </h1>
             </div>
-            <form action="/users/new" method="POST">
+            <form action="/login-client-service/users/new" method="POST">
               <div class="form-group">
                 <label name="username" style="color:whitesmoke">Username</label>
                 <input type="text" name="username"  class="form-control my-input" id="username"  placeholder="Username">

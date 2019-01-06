@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,7 +17,7 @@
                             Edit User
                         </h1>
                 </div>
-                <form action="/users/${userObject.userId}/edit" method="POST" name="login">
+                <form action="/login-client-service/users/${userObject.userId}/edit" method="POST" name="login">
                     <div class="form-group">
                         <label name="username" style="color:whitesmoke">Username</label>
                         <input type = "hidden" name="_method" value = "PUT" >

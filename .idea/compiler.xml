@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bars.darren.e.b.manuel" />
+        <module name="bars.eureka.darren.e.b.manuel" />
+        <module name="bars.login.client.darren.e.b.manuel" />
+        <module name="bars.login.server.darren.e.b.manuel" />
+        <module name="bars.zuul.darren.e.b.manuel" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bars.darren.e.b.manuel" target="11" />
+      <module name="bars.eureka.darren.e.b.manuel" target="11" />
+      <module name="bars.login.client.darren.e.b.manuel" target="11" />
+      <module name="bars.login.server.darren.e.b.manuel" target="11" />
+      <module name="bars.zuul.darren.e.b.manuel" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bars.darren.e.b.manuel" options="-parameters" />
+      <module name="bars.eureka.darren.e.b.manuel" options="-parameters" />
+      <module name="bars.login.client.darren.e.b.manuel" options="-parameters" />
+      <module name="bars.login.server.darren.e.b.manuel" options="-parameters" />
+      <module name="bars.zuul.darren.e.b.manuel" options="-parameters" />
+    </option>
+  </component>
+</project>

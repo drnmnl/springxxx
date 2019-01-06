@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bars.darren.e.b.manuel/bars.darren.e.b.manuel.iml" filepath="$PROJECT_DIR$/bars.darren.e.b.manuel/bars.darren.e.b.manuel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bars.eureka.darren.e.b.manuel/bars.eureka.darren.e.b.manuel.iml" filepath="$PROJECT_DIR$/bars.eureka.darren.e.b.manuel/bars.eureka.darren.e.b.manuel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bars.login.client.darren.e.b.manuel/bars.login.client.darren.e.b.manuel.iml" filepath="$PROJECT_DIR$/bars.login.client.darren.e.b.manuel/bars.login.client.darren.e.b.manuel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bars.login.server.darren.e.b.manuel/bars.login.server.darren.e.b.manuel.iml" filepath="$PROJECT_DIR$/bars.login.server.darren.e.b.manuel/bars.login.server.darren.e.b.manuel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bars.zuul.darren.e.b.manuel/bars.zuul.darren.e.b.manuel.iml" filepath="$PROJECT_DIR$/bars.zuul.darren.e.b.manuel/bars.zuul.darren.e.b.manuel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springxxx.iml" filepath="$PROJECT_DIR$/.idea/springxxx.iml" />
+    </modules>
+  </component>
+</project>

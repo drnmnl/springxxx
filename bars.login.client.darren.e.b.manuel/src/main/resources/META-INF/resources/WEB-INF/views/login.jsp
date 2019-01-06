@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
@@ -24,8 +24,9 @@
 	</tr>
 </table>
 <br><br>
+
 		<div class="container" style="margin: 0% 0% 0% 30%; width: 40%">
-			<form class="form-signin" method="POST" action="/login-success">
+			<form class="form-signin" method="POST" action="/login-client-service/login-success">
 				<h2 class="form-signin-heading" style="font-size: 40px; font-weight: bold">Authentication Service Account Management</h2>
 				<h3>Please sign in</h3>
 				<p>

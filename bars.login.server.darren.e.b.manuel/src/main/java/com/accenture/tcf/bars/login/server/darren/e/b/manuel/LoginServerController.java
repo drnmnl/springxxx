@@ -1,6 +1,7 @@
 package com.accenture.tcf.bars.login.server.darren.e.b.manuel;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,9 +20,13 @@ public class LoginServerController {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    private Environment env;
+
     @GetMapping("/")
     @ResponseBody
     public String greeting() {
+        System.out.println(env.getProperty("port"));
         return "Hello, World!";
     }
 
@@ -35,7 +40,6 @@ public class LoginServerController {
     @GetMapping( value = "/user/{id}")
     public ResponseEntity<User> getUser(@PathVariable int id, Principal principal) {
         User user = userRepository.findByUserId(id);
-        System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& user/id");
         if (principal.getName().equals(user.getUserName()) || isPrincipalAdmin(principal))
             return new ResponseEntity<User>(user, HttpStatus.OK);
         else

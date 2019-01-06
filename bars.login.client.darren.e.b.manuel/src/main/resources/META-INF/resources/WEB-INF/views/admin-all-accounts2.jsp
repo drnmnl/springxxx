@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!-- saved from url=(0053)https://getbootstrap.com/docs/3.3/examples/dashboard/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -25,12 +25,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">ATCP Authentication Service Demo</a>
+          <a class="navbar-brand" href="/login-client-service/">ATCP Authentication Service Demo</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/users/new"><strong>Add new user</strong></a></li>
-            <li><a href="/logout">Log out</a></li>
+            <li><a href="/login-client-service/users/new"><strong>Add new user</strong></a></li>
+            <li><a href="/login-client-service/logout">Log out</a></li>
           </ul>
         </div>
       </div>
@@ -59,10 +59,10 @@
                   <td>${userObject.firstName}</td>
                   <td>${userObject.lastName}</td>
                   <td>${userObject.role}</td>
-                    <td><a href="/users/${userObject.userId}/edit" class = "btn btn-warning btn-lg">Edit</a>
+                    <td><a href="/login-client-service/users/${userObject.userId}/edit" class = "btn btn-warning btn-lg">Edit</a>
                     </td>
                   <td>
-                      <form method="POST" action="/users/delete">
+                      <form method="POST" action="/login-client-service/users/delete">
                     <input type = "hidden" name="_method" value = "DELETE" >
                     <input type = "hidden" name="deleteMe" value="${userObject.userId}">
                     <input type = "submit" class = "btn btn-danger btn-lg" value="DELETE">

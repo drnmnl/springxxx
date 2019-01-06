@@ -26,9 +26,8 @@ public class BarsRestController {
     private String filePath;
     private String exceptionThrown;
 
-//    @Autowired
-//    @LoadBalanced
-//    private RestTemplate restTemplate;
+    @Autowired
+    private RestTemplate restTemplate;
 
     @Autowired
     private FileProcessorUtilService fileProcessorUtilService;
@@ -59,7 +58,6 @@ public class BarsRestController {
             searchResults = new ArrayList<Record>();
             logger.info("" + ex);
 
-            // TO-DO EXCEPTIONS!!!!!!!!!!!!!!!!!
             if (ex.getMessage().contains(BarsException.BILLING_CYCLE_NOT_ON_RANGE)) {
                exception = ex.getMessage();
             } else if (ex.getMessage().contains(BarsException.INVALID_START_DATE_FORMAT)) {
@@ -76,12 +74,6 @@ public class BarsRestController {
         return searchResults;
     }
 
-//
-//    @GetMapping("/exceptions")
-//    public StringWrapper getExceptions() {
-//        return new StringWrapper(this.exceptionThrown);
-//    }
-
 
     @PostMapping("/test")
         public String postMethodSample(@RequestBody String str) {
@@ -92,11 +84,11 @@ public class BarsRestController {
 
     @GetMapping(value="/loginstatus")
     public CredentialWrapper getCredentials() {
-        RestTemplate restTemplate = new RestTemplate();
+        String url = "http://localhost:9999/login-client-service/security";
         HttpHeaders httpHeaders = new HttpHeaders();
         HttpEntity<String> httpEntity = new HttpEntity(httpHeaders);
         ResponseEntity<String> responseEntity
-                = restTemplate.exchange("http://localhost:8002/security",
+                = restTemplate.exchange(url,
                 HttpMethod.GET, httpEntity, String.class);
 
         CredentialWrapper credentialWrapper = new CredentialWrapper(responseEntity.getBody());
